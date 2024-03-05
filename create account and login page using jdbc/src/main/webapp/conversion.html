@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .a,.b,.c,.d
+        {
+            border: 2px solid black;
+            height: 250px;
+            width: 450px;
+            text-align: center;
+            margin-left: 2%;
+            margin-top: 5%;
+        }
+        .tot
+        {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="tot">
+        <div class="a">
+            <h2>Speed Converter</h2>
+            <label for="">Speed in km</label>
+            <input id="spk"><br><br><br>
+
+            <label for="">Speed in m</label>
+            <input id="spm"><br><br><br>
+            <button onclick="cal()">Convert</button>
+        </div>
+
+        <script>
+            function cal()
+            {
+                if(document.getElementById("spk").value)
+                {
+                    let a = document.getElementById("spk").value;
+                    let r = document.getElementById("spm");
+                    let b = a*5/18;
+                    r.value=b;     
+                    
+                }
+                else
+                {
+                        let a = document.getElementById("spm").value;
+                        let r = document.getElementById("spk");
+                        let b = a*18/5;
+                        r.value=b;     
+                }
+           }
+        </script>
+
+        <div class="b">
+            <h2>Kilometer to Meter</h2>
+            <label for="">Enter km</label>
+            <input id="km"><br><br><br>
+
+            <label for="">Enter m</label>
+            <input id="mk"><br><br><br>
+            <button onclick="cal1()">Convert</button>
+        </div>
+
+        <script>
+            function cal1()
+            {
+                if(document.getElementById("km").value)
+                {
+                    let a1 = document.getElementById("km").value;
+                    let r1 = document.getElementById("mk");
+                    let b1 = a1*1000;
+                    r1.value=b1;     
+                    
+                }
+                else
+                {
+                        let a1 = document.getElementById("mk").value;
+                        let r1 = document.getElementById("km");
+                        let b1 = a1/1000;
+                        r1.value=b1;     
+                }
+           }
+        </script>
+
+        <div class="c">
+            <h2>Temperature</h2>
+            <label for="">Enter Farenheit</label>
+            <input id="fc"><br><br><br>
+
+            <label for="">Enter celsius</label>
+            <input id="cf"><br><br><br>
+
+            <button onclick="cal2()">Convert</button>
+        </div>
+
+        <script>
+            function cal2()
+            {
+                if(document.getElementById("fc").value)
+                {
+                    let a2 = document.getElementById("fc").value;
+                    let r2 = document.getElementById("cf");
+                    let b2 = (a2-32) * 5/9;
+                    r2.value=b2;     
+                    
+                }
+                else
+                {
+                        let a2 = document.getElementById("cf").value;
+                        let r2 = document.getElementById("fc");
+                        let b2 = (a2 * 9/5) + 32;
+                        r2.value=b2;     
+                }
+           }
+        </script>
+
+        <div class="d">
+            <h2>CentiMeter to Meter</h2>
+            <label for="">Enter cm</label>
+            <input id="cm"><br><br><br>
+
+            <label for="">Enter m</label>
+            <input id="mc"><br><br><br>
+
+            <button onclick="cal3()">Convert</button>
+        </div>
+
+        <script>
+            function cal3()
+            {
+                if(document.getElementById("cm").value)
+                {
+                    let a3 = document.getElementById("cm").value;
+                    let r3 = document.getElementById("mc");
+                    let b3 = a3/100;
+                    r3.value=b3;     
+                    
+                }
+                else
+                {
+                        let a3 = document.getElementById("mc").value;
+                        let r3 = document.getElementById("cm");
+                        let b3 = a3*100;
+                        r3.value=b3;     
+                }
+           }
+        </script>
+
+    </div>
+    
+</body>
+</html>
